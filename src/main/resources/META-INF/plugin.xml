@@ -1,0 +1,32 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.unusedimport.UnusedImportCleaner</id>
+
+    <name>Unused Import Remover</name>
+    <version>1.0.0</version>
+    <vendor email="altanmturkmen@outlook.com" url="">Altan Mehmet Turkmen</vendor>
+    <description>
+        Remove unused imports from Java and Kotlin files in a project, enhancing code readability and improving maintainability.
+        Vision: To get rid of every generic code quality problems with one click.
+
+
+        Contact: altanmturkmen@outlook.com
+    </description>
+    <depends>com.intellij.modules.java</depends>
+    <depends>org.jetbrains.kotlin</depends>
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+    <change-notes><![CDATA[
+<h2>1.0.0</h2>
+<ul>
+  <li>Initial release of the Unused Import Remover plugin.</li>
+  <li>Removes unused imports from Java and Kotlin files in the project.</li>
+</ul>
+]]></change-notes>
+    <actions>
+        <action id="unusedimportcleaner.RemoveUnusedImportsAction"
+                class="unusedimportcleaner.RemoveUnusedImportsAction" text="Remove Unused Imports">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
